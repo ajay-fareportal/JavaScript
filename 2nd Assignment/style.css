@@ -1,0 +1,17 @@
+#div-one {
+    border: 2px solid black;
+    padding: 20px;
+    margin: 20px;
+}
+
+#div-two {
+    text-align-last: center;
+    margin-top: 10px;
+    padding-top: 20px;
+    width: 200px;
+    font-weight: 550;
+    height: 50px;
+    font-size: 22px;
+    border: 1px solid black;
+    background-color: aqua;
+}
