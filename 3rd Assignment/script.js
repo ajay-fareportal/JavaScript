@@ -1,5 +1,13 @@
 
-let variable;
+let variable = {};
+Object.defineProperty(variable,"firstName",{
+    get:function(){
+        return value;
+    },
+    set : function(val){
+        
+    }
+});
 document.getElementById("btn")
     .onclick = function () {
         variable = document.getElementById("textbox").value;
