@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+.flexbox-container {
+    display: flex;
+    flex-flow: wrap;
+}
+.card {
+  width: 220px;
+  margin-top: 20px;
+  background: none;
+  border:none;
+  display: box;
+  
+  
+}
+.card:hover{
+    /* opacity: .5; */
+    transform: scale(1.1);
+}
+.card img {
+  /* display: block; */
+  width: 120px;
+  border: 2px solid #7a6a6a;
+  margin-left: auto;
+  margin-right: auto;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  position: relative;
+  /* padding: 10px; */
+}
+
+.card--content-head {
+  margin-top: -60px;
+  width: 220px;
+  height: 200px;
+  border-radius: 25px;
+  background-color: #e6d1e8;
+  border: 2px solid #b88484;
+}
+.card--content-heading {
+  text-align: center;
+  font-family: "Lobster", cursive;
+  font-size: larger;
+  margin: auto;
+  margin-top: 65px;
+}
+.m-t {
+  margin-top: 4px;
+}
+.card--content {
+  font-family: "Lobster", cursive;
+  text-align: center;
+  font-size: 16px;
+}
+.small{
+    font-size: 14px;
+} .salary{
+    font-size: 15px;
+}
