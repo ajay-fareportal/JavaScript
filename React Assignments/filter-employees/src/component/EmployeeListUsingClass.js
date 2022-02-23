@@ -1,5 +1,4 @@
 import Employee from "./Employee";
-import axios from 'axios' 
 import React, { Component } from 'react'
 
 class EmployeeList extends Component {
@@ -9,14 +8,6 @@ class EmployeeList extends Component {
         this.state = {
             employees :[]
         }
-    }
-
-    componentDidMount(){
-        axios.get('https://localhost:5001/Employee/employees')
-        .then(response => {
-            console.log(response)
-        })
-        .catch()
     }
 
     render() {
