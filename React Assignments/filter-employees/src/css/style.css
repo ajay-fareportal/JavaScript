@@ -5,7 +5,7 @@
 }
 .card {
   width: 220px;
-  margin-top: 20px;
+  margin-top: 50px;
   background: none;
   border:none;
   display: box;
@@ -14,7 +14,7 @@
 }
 .card:hover{
     /* opacity: .5; */
-    transform: scale(1.1);
+    /* transform: scale(1.1); */
 }
 .card img {
   /* display: block; */
@@ -32,7 +32,7 @@
 .card--content-head {
   margin-top: -60px;
   width: 220px;
-  height: 200px;
+  /* height: 200px; */
   border-radius: 25px;
   background-color: #e6d1e8;
   border: 2px solid #b88484;
@@ -57,3 +57,4 @@
 } .salary{
     font-size: 15px;
 }
+.del-btn{}
