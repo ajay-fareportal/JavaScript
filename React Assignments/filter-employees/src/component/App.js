@@ -1,4 +1,4 @@
-import EmployeeList from "./EmployeeListUsingClassUsingAPI";
+import EmployeeList from "./EmployeeListUsingClass";
 import Header from "./Header";
 import SearchBar from "./SearchBar";
 import employees from "../data/employeesData";
