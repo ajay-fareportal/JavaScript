@@ -10,13 +10,16 @@ class SBIStocks extends Component {
         }
     }
 
+
     componentDidMount() {
         debugger;
-        this.getDataFromApi();
+        setInterval(() => {
+            this.getDataFromApi();
+        }, 2000);
     }
 
     getDataFromApi() {
-        axios.get("https://priceapi.moneycontrol.com/pricefeed/bse/equitycash/SBI")
+        axios.get(this.props.apiUri)
             .then(response => {
                 this.setState({
                     sbidata: response.data.data
