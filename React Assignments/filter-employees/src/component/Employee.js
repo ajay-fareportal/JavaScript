@@ -1,5 +1,16 @@
+import axios from 'axios';
 import '../css/style.css'
+import EmployeeList from './EmployeeListUsingHooks';
 export default function (props) {
+
+
+    function deleteData() {
+        axios.delete('https://localhost:5001/Employee/delete/' + props.id).then(() => {
+            alert("Employee is Deleted");
+        })
+
+    }
+
     debugger;
     var img = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxd5gg-LRn7F8v-sVBfPlpgyVOOaLK1BRklQ4W9VRfO7yrI3tNCYOhFDJEDZxY0sBlo7Y&usqp=CAU"
     return (
@@ -20,7 +31,7 @@ export default function (props) {
                     </div>
                     <div className='justify-content-center inline-form'>
                         <span><button className='btn m-2 btn-warning'>Edit</button></span>
-                        <span><button className='btn m-2 btn-danger' id={props.id} onClick={props.deleteData} >Delete</button></span>
+                        <span><button className='btn m-2 btn-danger' id={props.id} onClick={deleteData} >Delete</button></span>
                     </div>
 
                 </div>

@@ -1,18 +1,22 @@
-import EmployeeList from "./EmployeeListUsingClass";
 import Header from "./Header";
-import AddEmployee from "./AddEmployee";
+import EmployeeList from "./EmployeeListUsingHooks";
+// import AddEmployee from "./AddEmployee";
 import employees from "../data/employeesData";
+import Counter from "./Hooks/Counter";
+import AddEmployeeUsingHooks from "./Hooks/AddEmployeeUsingHooks";
 
 
 function App() {
+  const apiUri = 'https://localhost:5001/Employee/employees';
   return (
     <div className="container">
-      <Header/>
+      <Header />
       {/* <SearchBar/> */}
-      <AddEmployee/>
+      {/* <Counter/> */}
       {/* <EmployeeList
-        employees = {employees}
+        employees = {apiUri}
       /> */}
+      <AddEmployeeUsingHooks />
     </div>
   );
 }
