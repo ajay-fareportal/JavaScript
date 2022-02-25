@@ -1,13 +1,11 @@
 import axios from 'axios';
 import '../css/style.css'
-import EmployeeList from './EmployeeListUsingHooks';
 export default function (props) {
-
 
     debugger;
     var img = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxd5gg-LRn7F8v-sVBfPlpgyVOOaLK1BRklQ4W9VRfO7yrI3tNCYOhFDJEDZxY0sBlo7Y&usqp=CAU"
     return (
-        <div className="col col-lg-3 justify-content-center">
+        <div className="justify-content-center">
             <div className="card">
                 <img src={img} />
                 <div className="card--content-head">
@@ -24,7 +22,7 @@ export default function (props) {
                     </div>
                     <div className='justify-content-center inline-form'>
                         <span><button className='btn m-2 btn-warning'>Edit</button></span>
-                        <span><button className='btn m-2 btn-danger' id={props.id} onClick={props.deleteData} >Delete</button></span>
+                        <span><button className='btn m-2 btn-danger' id={props.id} >Delete</button></span>
                     </div>
 
                 </div>

@@ -5,16 +5,17 @@
 }
 .card {
   width: 220px;
-  margin-top: 50px;
+  margin-top: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
   background: none;
   border:none;
   display: box;
   
-  
 }
 .card:hover{
     /* opacity: .5; */
-    /* transform: scale(1.1); */
+    transform: scale(1.1);
 }
 .card img {
   /* display: block; */

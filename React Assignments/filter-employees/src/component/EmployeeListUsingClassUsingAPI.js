@@ -21,6 +21,7 @@ class EmployeeList extends Component {
     // }
 
     render() {
+        debugger
         return (
             <div>
                 <div className=" container row justify-content-center mt-4 mb-3">
@@ -33,27 +34,15 @@ class EmployeeList extends Component {
                 </div>
                 <div className="flexbox-container justify-content-center">
                     {this.state.employeeList.map((employee) => {
-                        return (<Employee {...employee} />)
+                        debugger
+                        return (<Employee {...employee} deleteData={this.deleteData} />)
                     })}
                 </div>
             </div>
         )
     }
 
-    deleteData = (event) => {
-        axios.delete("https://localhost:5001/Employee/delete/" + event.target.id).then(() => {
-            alert("Employee is deleted");
-            axios.get('https://localhost:5001/Employee/employees')
-                .then(response => {
-                    this.setState({
-                        employeeList: response.data
-                    })
-                    console.log(response)
-                })
-        })
-    }
-
-    componentDidMount() {
+    getData() {
         axios.get('https://localhost:5001/Employee/employees')
             .then(response => {
                 this.setState({
@@ -62,11 +51,20 @@ class EmployeeList extends Component {
                 console.log(response)
             })
             .catch()
+    }
 
+    deleteData = (event) => {
+        debugger;
+        let id = event.target.id;
+        axios.delete('https://localhost:5001/Employee/delete/' + id).then(() => {
+            alert("Employee is Deleted");
+        })
+        this.getData();
+    }
 
-
-
-        // axios.get('https://localhost:5001/Employee/delete/')
+    componentDidMount() {
+        debugger
+        this.getData();
     }
 
 
