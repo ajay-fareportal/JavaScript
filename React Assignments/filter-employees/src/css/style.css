@@ -13,9 +13,13 @@
   display: box;
   
 }
-.card:hover{
+.remove-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.card--content-head:hover{
     /* opacity: .5; */
-    transform: scale(1.1);
+    /* transform: scale(1.1); */
+    background-color: #b1b69f;
 }
 .card img {
   /* display: block; */

@@ -20,9 +20,9 @@ export default function (props) {
                     <div className="card--content">
                         <span>{props.location}</span>
                     </div>
-                    <div className='justify-content-center inline-form'>
-                        <span><button className='btn m-2 btn-warning'>Edit</button></span>
-                        <span><button className='btn m-2 btn-danger' id={props.id} >Delete</button></span>
+                    <div className='text-center inline-form'>
+                        <span><button className='btn m-2 btn-warning' name={props.id} onClick={props.updateData} >Edit</button></span>
+                        <span><button className='btn m-2 btn-danger' id={props.id} onClick={props.deleteData}>Delete</button></span>
                     </div>
 
                 </div>

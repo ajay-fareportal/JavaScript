@@ -23,7 +23,7 @@ export default function (props) {
                         <span>{props.location}</span>
                     </div>
                     <div className='justify-content-center inline-form'>
-                        <span><button className='btn m-2 btn-warning'>Edit</button></span>
+                        <span><button className='btn m-2 btn-warning' id={props.id} onClick={props.updateData}>Edit</button></span>
                         <span><button className='btn m-2 btn-danger' id={props.id} onClick={props.deleteData} >Delete</button></span>
                     </div>
 

@@ -1,12 +1,17 @@
-import axios from 'axios';
 import React, { Component } from 'react'
-import Employee from './EmployeeData';
 import { BrowserRouter, Link, Route } from 'react-router-dom';
 import EmployeesListData from './EmployeesListData';
+import Time from '../component/Hooks/CurrentTimeUsingHooks'
+import AddNewEmployee from './AddNewEmployee';
+import AboutComponent from './AboutComponent';
+import ContactUsComponet from './ContactUsComponet';
+import UpdateEmployee from './UpdateEmployee';
+import '../css/style.css'
+import FooterComponent from './FooterComponent';
 
 export class SinglePageCrudApp extends Component {
-    constructor(props) {
-        super(props)
+    constructor() {
+        super()
     }
 
     render() {
@@ -15,7 +20,7 @@ export class SinglePageCrudApp extends Component {
             <BrowserRouter>
                 <div>
                     <HeaderComponent></HeaderComponent>
-                    <ContentComponent apiUri = {this.props.apiUri}></ContentComponent>
+                    <ContentComponent></ContentComponent>
                     <FooterComponent></FooterComponent>
                 </div>
             </BrowserRouter>
@@ -25,47 +30,36 @@ export class SinglePageCrudApp extends Component {
 
 }
 
+function ContentComponent() {
+    debugger
+    return (
+        <div className='bg-dark remove-scrollbar' style={{ width: '100%', height: '600px', overflow: "auto", border: '1px solid black', "border-radius": "10px", padding: '5px', margin: '10px' }}>
 
+            <Route exact path="/" component={EmployeesListData}></Route>
+            <Route exact path="/about" component={AboutComponent}></Route>
+            <Route exact path="/contact" component={ContactUsComponet}></Route>
+            <Route exact path="/addnew" component={AddNewEmployee}></Route>
+            <Route exact path="/update/:id" component={UpdateEmployee}></Route>
+        </div>
+    )
+}
 
 function HeaderComponent() {
     return (
         <div className='container mt-2'>
-            <h1>This is header</h1>
-            <nav>
-                <Link style={{ margin: "10px" }} to="/">Home</Link>
-                <Link style={{ margin: "10px" }} to="help">Help</Link>
-                <Link style={{ margin: "10px" }} to="about">About</Link>
+            <h3 className='ms-2 text-center display-4 mb-3'>Single Page CRUD Application</h3>
+            <nav style={{ margin: "auto" }}>
+                <Link className='btn btn-primary' style={{ margin: "10px" }} to="/">Home</Link>
+                <Link className='btn btn-outline-success text-white' style={{ margin: "10px" }} to="addnew">Add New Employee</Link>
+                <Link className='btn btn-outline-success text-white' style={{ margin: "10px" }} to="about">About</Link>
+                <Link className='btn btn-outline-success text-white' style={{ margin: "10px" }} to="contact">Contact US</Link>
+
             </nav>
         </div>
 
 
     )
 }
-function ContentComponent(props) {
-    debugger
-    return (
-        <div style={{ width: '100%', height: '600px',overflow: "auto", border: '1px solid black', padding: '10px', margin: '10px' }}>
-            <Route exact path="/" component={EmployeeData(props)}></Route>
-        </div>
 
-
-    )
-}
-
-function EmployeeData(props){
-    debugger
-    <EmployeesListData apiUri = {props.apiUri} ></EmployeesListData>
-
-}
-
-function FooterComponent() {
-    return (
-        <div className='container mt-2'>
-            mai footer hai
-        </div>
-
-
-    )
-}
 
 export default SinglePageCrudApp

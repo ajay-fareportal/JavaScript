@@ -7,6 +7,7 @@ import AddEmployeeUsingHooks from "./Hooks/AddEmployeeUsingHooks";
 import SinglePageCrudApp from "../singlePageApplication/SinglePageCrudApp";
 import MainComponent from '../singlePageApplication/MainComponent'
 import EmployeesListData from "../singlePageApplication/EmployeesListData";
+import AddNewEmployee from '../singlePageApplication/AddNewEmployee'
 
 
 
@@ -17,13 +18,13 @@ function App() {
       {/* <Header /> */}
       {/* <SearchBar/> */}
       {/* <Counter/> */}
-      <EmployeeList
+      {/* <EmployeeList
         employees = {apiUri}
-      />
-      {/* <MainComponent></MainComponent> */}
-      {/* <SinglePageCrudApp
-          apiUri = {apiUri}
       /> */}
+      {/* <MainComponent></MainComponent> */}
+      <SinglePageCrudApp
+      />
+      {/* <AddNewEmployee></AddNewEmployee> */}
     </div>
   );
 }

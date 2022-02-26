@@ -35,7 +35,7 @@ class EmployeeList extends Component {
                 <div className="flexbox-container justify-content-center">
                     {this.state.employeeList.map((employee) => {
                         debugger
-                        return (<Employee {...employee} deleteData={this.deleteData} />)
+                        return (<Employee {...employee} updateData = {this.updateData} deleteData={this.deleteData} />)
                     })}
                 </div>
             </div>
